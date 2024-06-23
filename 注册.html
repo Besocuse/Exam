@@ -142,12 +142,17 @@
                             />
                         </div>
                     </div>
-                    <div class="layui-col-md6">
-                        <select>
-                        <option value="" selected style="display: none">您的身份</option>
-                        <option value="AAA">教师</option>
-                        <option value="BBB">学生</option>
-                        </select>
+                    <div class="layui-form-item">
+                        <div class="layui-input-wrap">
+                            <div class="layui-input-prefix">
+                                <i class="layui-icon layui-icon-username"></i>
+                            </div>
+                            <select lay-filter="exampleSelect">
+                                <option value="" selected>您的身份</option>
+                                <option value="AAA">教师</option>
+                                <option value="BBB">学生</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="layui-form-item">
                         <input
