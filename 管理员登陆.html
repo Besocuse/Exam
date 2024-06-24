@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>在线考试系统后台登录</title>
+    <link href="https://unpkg.com/layui@2.9.13/dist/css/layui.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 370px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .layui-form-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .layui-input {
+            border-radius: 5px !important;
+            height: 45px !important;
+            font-size: 14px;
+        }
+        .layui-form-label {
+            width: 80px;
+            text-align: left !important;
+            padding: 9px 0;
+        }
+        .layui-input-block {
+            margin-left: 90px;
+        }
+        .layui-btn {
+            width: 100%;
+            height: 45px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #1E9FFF;
+            border-color: #1E9FFF;
+            color: #fff;
+        }
+        .layui-btn:hover {
+            opacity: 0.8;
+        }
+        .vercode {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        .font-set {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+        .font-set a {
+            color: #1E9FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form class="layui-form" action="" method="post">
+            <h2>在线考试系统后台登录</h2>
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密 码</label>
+                <div class="layui-input-block">
+                    <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-submit lay-filter="formLogin">登 录</button>
+            </div>
+            <div class="font-set">
+                忘记密码？<a href="#">找回密码</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://unpkg.com/layui@2.9.13/dist/layui.js"></script>
+    <script>
+    </script>
+</body>
+</html>

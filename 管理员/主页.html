@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台管理系统</title>
+    <link href="//unpkg.com/layui@2.9.13/dist/css/layui.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* 自定义样式 */
+        .layui-layout-admin .layui-header {
+            background-color: #303945;
+            color: #fff;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .layui-layout-admin .layui-side {
+            left: 0;
+            top: 60px; /* 调整侧边栏顶部距离 */
+        }
+        .layui-side-scroll {
+            height: calc(100vh - 60px); /* 让滚动条适应内容高度 */
+        }
+        .layui-nav-tree .layui-this a,
+        .layui-nav-tree .layui-this a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .layui-nav-tree .layui-nav-child dd.layui-this a {
+            background-color: #4CAF50!important;
+            color: #fff!important;
+        }
+        .layui-footer {
+            background-color: #303945;
+            color: #ccc;
+            padding: 0px 20px;
+            text-align: center;
+            height: 33px!important;
+            line-height: 33px!important;
+        }
+        .layui-btn{
+            float: right;
+            margin: 10px;
+        }
+        .layui-table td, 
+        .layui-table th {
+            text-align: center; /* 居中对齐 */
+            vertical-align: middle; /* 垂直居中 */
+        }
+        .layui-table td{
+            padding: 0px 15px;
+        }
+
+    </style>
+    <script src="//unpkg.com/layui@2.9.13/dist/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">在线考试系统后台</div>
+        <button type="button" class="layui-btn layui-btn-radius" >退出登陆</button>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test" id="nav"> 
+                <li class="layui-nav-item">
+                    <a href="javascript:;">用户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:changeContent('教师表格');">教师信息</a></dd>
+                        <dd><a href="javascript:changeContent('学生表格');">学生信息</a></dd>
+                        <dd><a href="javascript:changeContent('管理员表格');">管理员信息</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:changeContent('考试表格');">考试管理</a></li>
+                <li class="layui-nav-item"><a href="javascript:changeContent('试题表格');">试题管理</a></li>
+                <li class="layui-nav-item"><a href="javascript:changeContent('课程表格');">课程管理</a></li>
+                <li class="layui-nav-item layui-nav-itemed"><a href="javascript:changeContent('工作台');">工作台</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <iframe id="key" src="欢迎页.html" frameborder="0" style="height: 100%;width: 100%;"></iframe>
+    </div>
+
+    <div class="layui-footer">
+        版权 © 2023 在线考试系统
+    </div>
+</div>
+
+<script>
+    function changeContent(key){
+        document.querySelector("#key").src = key + '.html';
+    }
+</script>
+</body>
+</html>

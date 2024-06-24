@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//unpkg.com/layui@2.9.13/dist/css/layui.css" rel="stylesheet"/>
+    <style>
+        .layui-btn{
+            float: right;
+            margin: 10px;
+        }
+        .layui-table td, 
+        .layui-table th {
+            text-align: center; /* 居中对齐 */
+            vertical-align: middle; /* 垂直居中 */
+        }
+        .layui-table td{
+            padding: 0px 15px;
+        }
+
+    </style>
+    <script src="//unpkg.com/layui@2.9.13/dist/layui.js"></script>
+</head>
+<body>
+    <div id="contentArea" style="padding: 10px;">
+        <table class="layui-table" lay-even lay-skin="line" >
+            <colgroup>
+                <col width="5%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="10%"> 
+                <col width="15%"> 
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>考试ID</th>
+                    <th>考试名称</th>
+                    <th>考试课程</th>
+                    <th>题目数量</th>
+                    <th>考试开始时间</th>
+                    <th>考试结束时间</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="AAA" title="默认"></td>
+                    <td>T001</td>
+                    <td>期中考试</td>
+                    <td>高等数学</td>
+                    <td>24</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>
+                        <div style="width: fit-content; margin: 0 auto;">
+                            <button class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">
+                                <i class="layui-icon layui-icon-edit"></i> 编辑
+                            </button>
+                            <button class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">
+                                <i class="layui-icon layui-icon-delete"></i> 删除
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="AAA" title="默认"></td>
+                    <td>T001</td>
+                    <td>期中考试</td>
+                    <td>高等数学</td>
+                    <td>24</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>
+                        <div style="width: fit-content; margin: 0 auto;">
+                            <button class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">
+                                <i class="layui-icon layui-icon-edit"></i> 编辑
+                            </button>
+                            <button class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">
+                                <i class="layui-icon layui-icon-delete"></i> 删除
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="AAA" title="默认"></td>
+                    <td>T001</td>
+                    <td>期中考试</td>
+                    <td>高等数学</td>
+                    <td>24</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>2024-6-24 16:06:34</td>
+                    <td>
+                        <div style="width: fit-content; margin: 0 auto;">
+                            <button class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">
+                                <i class="layui-icon layui-icon-edit"></i> 编辑
+                            </button>
+                            <button class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">
+                                <i class="layui-icon layui-icon-delete"></i> 删除
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="display: flex;align-items: center;justify-content: space-between;transform: translateY(-8px);">
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-primary layui-border-green" style="margin: 0 10px;height: 30px;line-height: 30px;">添加考试</button>
+                <div class="layui-input-group" >
+                    <input type="text" placeholder="搜索题目" class="layui-input" style="height: 30px">
+                    <div class="layui-input-split layui-input-suffix" style="cursor: pointer;height: 30px">
+                        <i class="layui-icon layui-icon-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="page" style="margin: 0 15px 10px 0;">
+                <div id="demo-laypage-normal-1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    layui.use(function(){
+        var laypage = layui.laypage;
+        // 普通用法
+        laypage.render({
+            elem: 'demo-laypage-normal-1',
+            count: 80 // 数据总数
+        });
+    });
+</script>
+</html>

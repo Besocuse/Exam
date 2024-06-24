@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #343a40;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        @keyframes rotateIn {
+            from {opacity: 0; transform: rotateY(360deg);}
+            to {opacity: 1; transform: rotateY(0deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>在线考试后台管理系统</h1>
+        <p>高效管理，轻松出题，精准评估</p>
+    </div>
+</body>
+</html>
